@@ -1,0 +1,45 @@
+# Agent OS - LLM Documentation
+
+## What is Agent OS?
+Agent OS is a system for structured AI-driven software development. It provides three layers of context (Standards, Product, Specs) to help AI coding agents write consistent, high-quality code that follows your team's conventions.
+
+## How to Use Agent OS
+
+### Core Workflow Commands
+1. **plan-product** - Analyze product vision, create/update mission and roadmap
+2. **create-spec** - Generate comprehensive feature specifications with task breakdowns  
+3. **execute-tasks** - Implement features following specs, update roadmap automatically
+4. **analyze-product** - Review current state, identify gaps and opportunities
+
+### File Structure Context
+- `.agent-os/product/` - Product mission, roadmap, decisions, tech stack
+- `.agent-os/specs/YYYY-MM-DD-feature/` - Individual feature specifications
+- `.agent-os/standards/` - Coding standards, style guides, best practices
+- `tasks.md` - Current project tasks (required in root)
+- `docs/` - User documentation (required folder)
+- `tests/` - Test scripts (required folder)
+
+### Key Principles
+- Always read environment files with CLI, never expose secrets
+- Follow the three-layer context system (Standards → Product → Specs)
+- Create comprehensive specs before coding
+- Update roadmap and decisions as work progresses
+- Maintain consistency with established coding standards
+
+### Installation
+- Base installation: `~/.agent-os/` (global standards and instructions)
+- Project installation: `.agent-os/` (project-specific context)
+- Use provided setup scripts or manual installation process
+
+### Best Practices for AI Agents
+- Review plans carefully during spec creation phase
+- Trust the structured workflow process
+- Start fresh with new specs rather than fixing poorly implemented code
+- Be specific in standards documentation with examples
+- Update documentation as patterns emerge
+
+## Context Management
+Agent OS uses smart context loading - files are loaded conditionally based on current task needs, reducing context usage by 60-80% compared to loading everything upfront.
+
+## Compatibility
+Works with Claude Code, Cursor, and any AI coding tool. Supports any programming language or framework through customizable standards files.

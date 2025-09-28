@@ -1,0 +1,3238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://buildermethods.com/agent-os -->
+<html class="h-full"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css" data-tag-name="trix-editor">trix-editor {
+    display: block;
+}
+
+trix-editor:empty::before {
+    content: attr(placeholder);
+    color: graytext;
+    cursor: text;
+    pointer-events: none;
+    white-space: pre-line;
+}
+
+trix-editor a[contenteditable=false] {
+    cursor: text;
+}
+
+trix-editor img {
+    max-width: 100%;
+    height: auto;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea {
+    resize: none;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea.trix-autoresize-clone {
+    position: absolute;
+    left: -9999px;
+    max-height: 0px;
+}
+
+trix-editor [data-trix-attachment] figcaption[data-trix-placeholder]:empty::before {
+    content: attr(data-trix-placeholder);
+    color: graytext;
+}
+
+trix-editor [data-trix-cursor-target] {
+    display: inline-block !important;
+    width: 1px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+trix-editor [data-trix-cursor-target=left] {
+    vertical-align: top !important;
+    margin-left: -1px !important;
+}
+
+trix-editor [data-trix-cursor-target=right] {
+    vertical-align: bottom !important;
+    margin-right: -1px !important;
+}</style><style type="text/css" data-tag-name="trix-toolbar">trix-toolbar {
+  display: block;
+}
+
+trix-toolbar {
+  white-space: nowrap;
+}
+
+trix-toolbar [data-trix-dialog] {
+  display: none;
+}
+
+trix-toolbar [data-trix-dialog][data-trix-active] {
+  display: block;
+}
+
+trix-toolbar [data-trix-dialog] [data-trix-validate]:invalid {
+  background-color: #ffdddd;
+}</style><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+    
+<title>
+  Agent OS | A free open-source system to train smart AI coding agents
+</title>
+
+<meta property="og:title" content="Agent OS | A free open-source system to train smart AI coding agents">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="nSy6aUC528bkqJpRu41P2vroyJY4AODMVUGaUuXUz0aJepJssYaMYh7BjRol83G5rfs7RpZJz6tDikkbCGIszA">
+
+
+
+
+
+
+<meta name="description" content="Agent OS is a free open-source system to train your AI coding agents to build your way, not their way. Works with Claude Code, Cursor, or any other AI coding tool.">
+<meta property="og:description" content="Agent OS is a free open-source system to train your AI coding agents to build your way, not their way. Works with Claude Code, Cursor, or any other AI coding tool.">
+
+
+<meta property="og:image" content="https://buildermethods.com/assets/agent-os-og-0cb07514.png">
+<meta property="og:image:alt" content="Agent OS | A free open-source system to train smart AI coding agents">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://buildermethods.com/assets/agent-os-og-0cb07514.png">
+<meta name="twitter:image:alt" content="Agent OS | A free open-source system to train smart AI coding agents">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Agent OS _ A free open-source system to train smart AI coding agents_files/css2" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="https://buildermethods.com/assets/favicon/favicon-b523c039.ico">
+
+<link rel="stylesheet" href="./Agent OS _ A free open-source system to train smart AI coding agents_files/tailwind-b56b31ef.css" data-turbo-track="reload">
+<link rel="stylesheet" href="./Agent OS _ A free open-source system to train smart AI coding agents_files/application-8b441ae0.css" data-turbo-track="reload">
+<link rel="stylesheet" href="./Agent OS _ A free open-source system to train smart AI coding agents_files/actiontext-e646701d.css" data-turbo-track="reload">
+<link rel="stylesheet" href="./Agent OS _ A free open-source system to train smart AI coding agents_files/application-8b441ae0.css" data-turbo-track="reload">
+<link rel="stylesheet" href="./Agent OS _ A free open-source system to train smart AI coding agents_files/tailwind-b56b31ef.css" data-turbo-track="reload">
+
+<script type="text/javascript" async="" charset="utf-8" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-QqfebjEuIgnKX+GxU4cN+byIJWmt6PLd1Lhx1lDrZnC9qHnUqKxROgib38rfVJzS"></script><script>
+  // Dynamically load highlight.js theme based on system dark mode
+  (function() {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+
+    // Check if user prefers dark mode
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Set the appropriate theme
+    link.href = prefersDark
+      ? 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css'
+      : 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css';
+
+    // Add the link to the document head
+    document.head.appendChild(link);
+
+    // Listen for changes to the color scheme preference
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        link.href = e.matches
+          ? 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css'
+          : 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css';
+      });
+    }
+  })();
+</script><link rel="stylesheet" href="./Agent OS _ A free open-source system to train smart AI coding agents_files/github.min.css">
+<script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-3da76259.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-3a2e143f.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-4b1e420e.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc53fe7.js",
+    "trix": "/assets/trix-4b540cb5.js",
+    "@rails/actiontext": "/assets/actiontext.esm-f1c04d34.js",
+    "@rails/activestorage": "/assets/activestorage.esm-f2909226.js",
+    "@highlightjs/cdn-assets/es/core.min.js": "/assets/@highlightjs--cdn-assets--es--core.min.js-ede002df.js",
+    "@highlightjs/cdn-assets/es/languages/json.min.js": "/assets/@highlightjs--cdn-assets--es--languages--json.min.js-7d64e394.js",
+    "@highlightjs/cdn-assets/es/languages/javascript.min.js": "/assets/@highlightjs--cdn-assets--es--languages--javascript.min.js-0f35b3a9.js",
+    "@highlightjs/cdn-assets/es/languages/ruby.min.js": "/assets/@highlightjs--cdn-assets--es--languages--ruby.min.js-c3ebe954.js",
+    "@highlightjs/cdn-assets/es/languages/erb.min.js": "/assets/@highlightjs--cdn-assets--es--languages--erb.min.js-671ba92d.js",
+    "@highlightjs/cdn-assets/es/languages/css.min.js": "/assets/@highlightjs--cdn-assets--es--languages--css.min.js-81a21860.js",
+    "@highlightjs/cdn-assets/es/languages/shell.min.js": "/assets/@highlightjs--cdn-assets--es--languages--shell.min.js-d8e6def8.js",
+    "@highlightjs/cdn-assets/es/languages/yaml.min.js": "/assets/@highlightjs--cdn-assets--es--languages--yaml.min.js-84c32dcb.js",
+    "@highlightjs/cdn-assets/es/languages/xml.min.js": "/assets/@highlightjs--cdn-assets--es--languages--xml.min.js-bc72cf03.js",
+    "@highlightjs/cdn-assets/es/languages/plaintext.min.js": "/assets/@highlightjs--cdn-assets--es--languages--plaintext.min.js-cc3f1183.js",
+    "controllers/application": "/assets/controllers/application-3affb389.js",
+    "controllers/bmp_controller": "/assets/controllers/bmp_controller-e89dad63.js",
+    "controllers/code_snippet_controller": "/assets/controllers/code_snippet_controller-8a195f9f.js",
+    "controllers/commerce/coupon_controller": "/assets/controllers/commerce/coupon_controller-75265fa5.js",
+    "controllers/commerce/dunning_controller": "/assets/controllers/commerce/dunning_controller-44265c15.js",
+    "controllers/commerce/onetime_checkout_controller": "/assets/controllers/commerce/onetime_checkout_controller-e80c2199.js",
+    "controllers/commerce/payment_method_controller": "/assets/controllers/commerce/payment_method_controller-cbbbd40b.js",
+    "controllers/commerce/plans_controller": "/assets/controllers/commerce/plans_controller-074da61d.js",
+    "controllers/commerce/seats_calculator_controller": "/assets/controllers/commerce/seats_calculator_controller-be4a9856.js",
+    "controllers/commerce/subscription_checkout_controller": "/assets/controllers/commerce/subscription_checkout_controller-9dff2a6e.js",
+    "controllers/components/color_picker_controller": "/assets/controllers/components/color_picker_controller-4e11118c.js",
+    "controllers/components/copy_controller": "/assets/controllers/components/copy_controller-2cb42a7d.js",
+    "controllers/components/dropdown_controller": "/assets/controllers/components/dropdown_controller-5535dc45.js",
+    "controllers/components/file_upload_controller": "/assets/controllers/components/file_upload_controller-9ac8ba77.js",
+    "controllers/components/image_upload_controller": "/assets/controllers/components/image_upload_controller-c0021395.js",
+    "controllers/components/modal_controller": "/assets/controllers/components/modal_controller-06d199ee.js",
+    "controllers/components/panels_controller": "/assets/controllers/components/panels_controller-a2be178e.js",
+    "controllers/components/radio_buttons_controller": "/assets/controllers/components/radio_buttons_controller-180f8e0d.js",
+    "controllers/components/reorder_controller": "/assets/controllers/components/reorder_controller-b4e08d2e.js",
+    "controllers/components/rich_text_controller": "/assets/controllers/components/rich_text_controller-cb7707f5.js",
+    "controllers/components/subnav_controller": "/assets/controllers/components/subnav_controller-dfff8630.js",
+    "controllers/components/toggle_controller": "/assets/controllers/components/toggle_controller-72082f66.js",
+    "controllers/conditional_fields_controller": "/assets/controllers/conditional_fields_controller-e0659d21.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-708796bd.js",
+    "controllers": "/assets/controllers/index-ee64e1f1.js",
+    "controllers/kit_resubscribe_email_controller": "/assets/controllers/kit_resubscribe_email_controller-06b2fde6.js",
+    "controllers/mobile_nav_controller": "/assets/controllers/mobile_nav_controller-fe49f30b.js",
+    "controllers/recaptcha_controller": "/assets/controllers/recaptcha_controller-912313f3.js",
+    "controllers/scroll_controller": "/assets/controllers/scroll_controller-c4ea594e.js",
+    "controllers/survey_form_controller": "/assets/controllers/survey_form_controller-52c698de.js",
+    "controllers/timezone_controller": "/assets/controllers/timezone_controller-575356ce.js"
+  }
+}</script>
+<link rel="modulepreload" href="https://buildermethods.com/assets/application-3da76259.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/turbo.min-3a2e143f.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/stimulus.min-4b1e420e.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/stimulus-loading-1fc53fe7.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/trix-4b540cb5.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/actiontext.esm-f1c04d34.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/activestorage.esm-f2909226.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--core.min.js-ede002df.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--json.min.js-7d64e394.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--javascript.min.js-0f35b3a9.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--ruby.min.js-c3ebe954.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--erb.min.js-671ba92d.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--css.min.js-81a21860.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--shell.min.js-d8e6def8.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--yaml.min.js-84c32dcb.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--xml.min.js-bc72cf03.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/@highlightjs--cdn-assets--es--languages--plaintext.min.js-cc3f1183.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/application-3affb389.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/bmp_controller-e89dad63.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/code_snippet_controller-8a195f9f.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/commerce/coupon_controller-75265fa5.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/commerce/dunning_controller-44265c15.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/commerce/onetime_checkout_controller-e80c2199.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/commerce/payment_method_controller-cbbbd40b.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/commerce/plans_controller-074da61d.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/commerce/seats_calculator_controller-be4a9856.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/commerce/subscription_checkout_controller-9dff2a6e.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/color_picker_controller-4e11118c.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/copy_controller-2cb42a7d.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/dropdown_controller-5535dc45.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/file_upload_controller-9ac8ba77.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/image_upload_controller-c0021395.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/modal_controller-06d199ee.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/panels_controller-a2be178e.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/radio_buttons_controller-180f8e0d.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/reorder_controller-b4e08d2e.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/rich_text_controller-cb7707f5.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/subnav_controller-dfff8630.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/components/toggle_controller-72082f66.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/conditional_fields_controller-e0659d21.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/hello_controller-708796bd.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/index-ee64e1f1.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/kit_resubscribe_email_controller-06b2fde6.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/mobile_nav_controller-fe49f30b.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/recaptcha_controller-912313f3.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/scroll_controller-c4ea594e.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/survey_form_controller-52c698de.js">
+<link rel="modulepreload" href="https://buildermethods.com/assets/controllers/timezone_controller-575356ce.js">
+<script type="module">import "application"</script>
+
+<script defer="" data-domain="buildermethods.com" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/script.js.download"></script>
+
+<script src="./Agent OS _ A free open-source system to train smart AI coding agents_files/api.js.download"></script>
+
+<meta name="turbo-prefetch" content="false">
+
+<script src="./Agent OS _ A free open-source system to train smart AI coding agents_files/saved_resource"></script>
+
+
+  </head>
+
+  <body class="instrumental-layout h-full" data-controller="mobile-nav components--modal scroll" data-mobile-nav-open-value="false" data-scroll-duration-value="800">
+    <turbo-frame id="flash_message">
+</turbo-frame>    <div class="hidden fixed top-0 left-0 w-full h-full z-50 bg-gray-50 dark:bg-gray-950" data-mobile-nav-target="mobileNav">
+
+  <div class="absolute top-6 right-6 z-50" data-action="click-&gt;mobile-nav#toggle">
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class="text-gray-400 dark:text-white text-lg md:text-xl"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+  </div>
+
+  <div class="space-y-8 relative py-4 px-4">
+
+    <div>
+      
+
+
+  <a class="" href="https://buildermethods.com/">
+          <img alt="Builder Methods" class="h-5.5
+                          md:h-6
+                          xl:h-7 w-auto dark:hidden " src="./Agent OS _ A free open-source system to train smart AI coding agents_files/builder-methods-59003743.svg">
+      <img alt="Builder Methods" class="h-5.5
+                          md:h-6
+                          xl:h-7 w-auto hidden dark:block " src="./Agent OS _ A free open-source system to train smart AI coding agents_files/builder-methods-light-c90b85bf.svg">
+
+</a>
+    </div>
+
+    <div class="px-2 space-y-12">
+
+      
+<div class="flex flex-col space-y-4 font-display
+            lg:flex-row lg:space-x-2 lg:space-y-0">
+  <a class="group/nav-link" href="https://buildermethods.com/#start">
+    Start here
+</a>  <a class="group/nav-link" href="https://buildermethods.com/#products">
+    Resources
+</a>    <a class="group/nav-link" href="https://buildermethods.com/login">
+      Login
+</a>    <a class="btn btn-primary btn-small text-sm" href="https://buildermethods.com/pro">
+      Join
+</a></div>
+
+
+      
+  <div class="flex items-center space-x-3" id="unauthenticated-links">
+  <a class="btn btn-ghost text-gray-400 dark:text-gray-600" href="https://buildermethods.com/login">
+    Sign in
+</a>  <!--
+  <a class="btn btn-primary" href="/signup">
+    <span>
+      Sign up
+    </span>
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absoluteStrokeWidth="false" class=" "><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>  -->
+</div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+    <div class="px-6 bg-gray-100 dark:bg-gray-800 flex flex-col overflow-hidden relative
+                " id="top">
+      <div class="flex flex-col">
+        <div class="py-3 flex items-center justify-between">
+  <div class="pt-1 -ml-2
+              xs:pt-1
+              md:pt-1.5 -md:ml-0.5
+              lg:pt-2 lg:pl-2
+              xl:pt-1.5 xl:pl-2.5">
+    
+
+
+  <a class="inline-block" href="https://buildermethods.com/">
+          <img alt="Builder Methods" class="h-5.5
+                 md:h-6
+                 xl:h-7 w-auto dark:hidden " src="./Agent OS _ A free open-source system to train smart AI coding agents_files/builder-methods-59003743.svg">
+      <img alt="Builder Methods" class="h-5.5
+                 md:h-6
+                 xl:h-7 w-auto hidden dark:block " src="./Agent OS _ A free open-source system to train smart AI coding agents_files/builder-methods-light-c90b85bf.svg">
+
+</a>
+  </div>
+
+  <div class="">
+    <div class="hidden
+                lg:block lg:relative lg:top-0.5
+                xl:top-0.25">
+      
+<div class="flex flex-col space-y-4 font-display
+            lg:flex-row lg:space-x-2 lg:space-y-0">
+  <a class="lg:btn md:btn-ghost lg:hover:bg-gray-200 lg:text-gray-500 lg:opacity-80 lg:hover:opacity-100
+                                 lg:dark:text-gray-500 lg:dark:opacity-100 lg:dark:hover:bg-gray-700
+                                 lg:text-xs
+                                 xl:text-sm" href="https://buildermethods.com/#start">
+    Start here
+</a>  <a class="lg:btn md:btn-ghost lg:hover:bg-gray-200 lg:text-gray-500 lg:opacity-80 lg:hover:opacity-100
+                                 lg:dark:text-gray-500 lg:dark:opacity-100 lg:dark:hover:bg-gray-700
+                                 lg:text-xs
+                                 xl:text-sm" href="https://buildermethods.com/#products">
+    Resources
+</a>    <a class="lg:btn md:btn-ghost lg:hover:bg-gray-200 lg:text-gray-500 lg:opacity-80 lg:hover:opacity-100
+                                 lg:dark:text-gray-500 lg:dark:opacity-100 lg:dark:hover:bg-gray-700
+                                 lg:text-xs
+                                 xl:text-sm" href="https://buildermethods.com/login">
+      Login
+</a>    <a class="btn btn-primary btn-small text-sm" href="https://buildermethods.com/pro">
+      Join
+</a></div>
+
+    </div>
+
+    <div class="cursor-pointer text-gray-400 dark:text-gray-400
+                lg:hidden" data-action="click-&gt;mobile-nav#toggle">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" w-5 h-5 md:w-6 md:h-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+          
+
+
+
+
+
+<div class="bg-gray-100 dark:bg-gray-800 py-10 xs:py-12 md:py-20 lg:py-28 xl:py-32">
+
+  <div class="max-w-7xl mx-auto space-y-8 text-center
+              sm:space-y-12
+              xl:space-y-16">
+
+        <div class="mx-auto
+                    space-y-2 md:space-y-4 lg:space-y-6 2xl:space-y-8
+                    max-w-sm md:max-w-md lg:max-w-xl 2xl:max-w-3xl">
+          <h1 class="text-xl text-pretty
+                     xs:text-2xl
+                     sm:text-3xl sm:leading-10
+                     md:text-4xl md:leading-12
+                     lg:text-5xl lg:leading-14
+                     2xl:text-6xl 2xl:leading-18">
+              Stop prompting AI coding agents <span class="whitespace-nowrap">like it's 2024</span>
+
+          </h1>
+
+          <p class="text-black dark:text-gray-400 text-pretty
+                    sm:text-lg
+                    md:text-xl
+                    lg:text-2xl
+                    2xl:text-3xl">
+              Your coding agents are capable of so much more—they just need an operating system. <span class="whitespace-nowrap">Introducing, <span class="font-medium text-secondary">Agent OS</span>.</span>
+
+          </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto
+                  xl:max-w-4xl
+                  2xl:max-w-5xl">
+          
+  
+
+<div class="modal hidden
+            z-50 fixed top-0 left-0 w-full h-full flex flex-col pt-8 px-8
+            lg:py-8 lg:items-center lg:justify-center
+            bg-black/70" id="agent-os-demo-modal" data-components--modal-target="modal" data-action="click-&gt;components--modal#clickOutsideHide">
+
+  <div class="modal-box
+              relative shadow-xl rounded-lg rounded-lg overflow-y-auto
+              md:mx-auto
+              bg-white dark:bg-gray-900
+              w-full lg:w-[90%] xl:w-[85%] 2xl:w-[70%]">
+      <div class="absolute top-2 right-3 cursor-pointer text-gray-400 hover:text-black" data-action="click-&gt;components--modal#close">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </div>
+
+
+    <div class="p-2 space-y-4 md:space-y-8 ">
+      
+  <div class="relative" style="padding-top: 56.25%">
+    <iframe class="absolute top-0 left-0 w-full h-full" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/4PlVnrliN3Q.html" title="Agent OS Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" data-dashlane-frameid="123"></iframe>
+  </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<div class="max-w-5xl mx-auto" id="demo">
+  <div class="modal-trigger
+              group relative w-full h-0 pb-[56.25%] cursor-pointer p-2 bg-transparent rounded-lg transition-all duration-300
+              hover:bg-black" data-action="click-&gt;components--modal#launch" data-modal-id="agent-os-demo-modal" data-play-video="true" data-turbo="false">
+
+    <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center z-30">
+      <div class="bg-white dark:bg-black rounded-full w-20 h-20 flex items-center justify-center transition-all duration-300
+                  group-hover:rounded-full group-hover:px-6 group-hover:w-auto group-hover:shadow-2xl">
+        <span class="group-hover:hidden text-primary-400">
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+        </span>
+        <span class="hidden group-hover:block text-primary-400">
+          <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+        </span>
+
+        <div class="w-0 overflow-hidden transition-all duration-300 ml-0
+                    group-hover:w-auto group-hover:ml-3">
+          <span class="text-lg font-semibold font-display uppercase tracking-wider opacity-0 transition-opacity duration-300 text-black dark:text-white
+                      group-hover:opacity-100 whitespace-nowrap">
+            Watch the demo
+          </span>
+        </div>
+      </div>
+    </div>
+
+      <video class="absolute inset-0 w-full h-full rounded-lg object-cover z-10 opacity-40 transition-opacity duration-300
+                    group-hover:opacity-20
+                    
+                    " autoplay="" loop="" muted="" playsinline="">
+        <source src="/assets/agent-os-teaser-d32a2baf.mp4" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+
+      </div>
+
+        <div class="space-y-8 text-left
+              sm:max-w-sm sm:mx-auto
+              md:text-lg
+              lg:max-w-3xl lg:flex lg:items-start lg:justify-between lg:space-y-0 lg:space-x-16 lg:px-6
+              xl:max-w-4xl xl:px-12
+              2xl:max-w-5xl 2xl:px-16">
+
+    <div class="space-y-4
+                lg:flex-1">
+      <h2 class="text-xl text-black dark:text-white pt-0
+            lg:text-2xl">
+        A system to make AI coding agents<br class="hidden sm:block"> build your way, <span class="whitespace-nowrap">not their way.</span>
+      </h2>
+      <p>
+        Agent OS transforms AI coding agents from confused interns into productive developers. With structured workflows that capture your standards, your stack, and the unique details of your codebase, Agent OS gives your agents the specs they need to ship quality code on the first try—not the fifth.
+      </p>
+    </div>
+
+    <div class="space-y-4
+                lg:flex-1 lg:pt-2">
+      <h4 class="font-display font-semibold uppercase tracking-wider text-xs text-gray-400
+                  md:text-sm">
+        Use it with:
+      </h4>
+
+      <div class="space-y-4">
+          <div class="inline-flex items-start justify-start text-left space-x-3">
+            <div class="h-[1.35rem] flex flex-col items-start justify-center
+                        md:h-[1.5rem]
+                        lg:h-[1.35rem]
+                        2xl:h-[1.6rem]">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class="text-tertiary w-4 h-4 2xl:w-5 2xl:h-5"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <div class="flex-1 min-h-[1.5rem] text-pretty
+                        lg:text-base
+                        2xl:text-lg">
+              Claude Code, Cursor, or any other AI coding tool.
+            </div>
+          </div>
+          <div class="inline-flex items-start justify-start text-left space-x-3">
+            <div class="h-[1.35rem] flex flex-col items-start justify-center
+                        md:h-[1.5rem]
+                        lg:h-[1.35rem]
+                        2xl:h-[1.6rem]">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class="text-secondary w-4 h-4 2xl:w-5 2xl:h-5"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <div class="flex-1 min-h-[1.5rem] text-pretty
+                        lg:text-base
+                        2xl:text-lg">
+              New products or established codebases.
+            </div>
+          </div>
+          <div class="inline-flex items-start justify-start text-left space-x-3">
+            <div class="h-[1.35rem] flex flex-col items-start justify-center
+                        md:h-[1.5rem]
+                        lg:h-[1.35rem]
+                        2xl:h-[1.6rem]">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class="text-primary dark:text-primary-500 w-4 h-4 2xl:w-5 2xl:h-5"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <div class="flex-1 min-h-[1.5rem] text-pretty
+                        lg:text-base
+                        2xl:text-lg">
+              Big features, small fixes, or anything in between.
+            </div>
+          </div>
+          <div class="inline-flex items-start justify-start text-left space-x-3">
+            <div class="h-[1.35rem] flex flex-col items-start justify-center
+                        md:h-[1.5rem]
+                        lg:h-[1.35rem]
+                        2xl:h-[1.6rem]">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class="text-gray-500 dark:text-gray-400 w-4 h-4 2xl:w-5 2xl:h-5"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <div class="flex-1 min-h-[1.5rem] text-pretty
+                        lg:text-base
+                        2xl:text-lg">
+              Any language or framework.
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+        <div class="pt-5 lg:pt-8">
+            <div class="space-y-2">
+    <h4 class="font-display font-semibold uppercase tracking-wider text-xs text-gray-400 mb-0
+                md:text-sm">
+      Free &amp; Open Source
+    </h4>
+    <div class="flex flex-col space-y-4 items-center justify-center pt-6 pb-3
+                sm:flex-row sm:space-y-0 sm:space-x-4">
+      <a class="btn btn-primary" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#docs" data-scroll-duration-value="800">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+        <span class="whitespace-nowrap">Docs &amp; Setup</span>
+</a>
+      <a class="btn btn-ghost hover:bg-gray-200 dark:hover:bg-gray-800" target="_blank" href="https://github.com/buildermethods/agent-os">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+        <span class="whitespace-nowrap">View on GitHub</span>
+</a>    </div>
+  </div>
+
+
+        </div>
+
+  </div>
+
+</div>
+
+
+
+    </div>
+
+    <div class="px-8">
+      
+
+
+<div class="space-y-16 mx-auto
+            max-w-md
+                       lg:max-w-4xl
+                       2xl:max-w-5xl
+            pt-20 sm:pt-24 md:pt-24 lg:pt-32 xl:pt-36
+            pb-20 sm:pb-24 md:pb-28 xl:pb-32" id="docs">
+
+
+  <div class="space-y-20 sm:space-y-24 md:space-y-28 lg:space-y-36">
+    
+
+  <div class="flex flex-col items-start space-y-8
+              lg:flex-row lg:space-y-0 lg:space-x-16 lg:justify-between
+              2xl:space-x-24">
+
+    <div class="w-full
+                lg:w-1/4 lg:pt-9 lg:sticky lg:top-0">
+      
+<div class="relative space-y-0
+            lg:space-y-10" id="" data-controller="components--subnav" data-components--subnav-scroll-tracking-value="&quot;true&quot;">
+
+
+  <div class="flex items-center space-x-4 bg-primary-50 dark:bg-gray-800 py-3 px-4 rounded
+              lg:hidden" data-action="click-&gt;components--subnav#toggle">
+    <div class="flex-1 text-primary dark:text-primary-500 font-medium" data-components--subnav-target="activeItemText">
+    Refining Agent OS
+  </div>
+    <div>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-components--subnav-target="activeItemChevron"><path d="m6 9 6 6 6-6"></path></svg>
+    </div>
+  </div>
+
+  <div class="hidden absolute bg-primary-50 dark:bg-gray-800 rounded top-12 left-0 w-full py-2 px-1.5 space-y-2 z-50
+              lg:block lg:static lg:py-0 lg:px-0 lg:bg-transparent lg:dark:bg-transparent" data-components--subnav-target="menu">
+    
+
+
+  
+<a class="group flex items-start space-x-2 py-2 rounded px-4 hover:bg-primary-50 dark:hover:bg-gray-900" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#why" data-scroll-duration-value="800">
+  <div class="subnav-link-text font-display whitespace-nowrap flex-1 min-h-[1.7rem] font-medium">
+    Why Agent OS?
+  </div>
+</a>
+
+  
+<a class="group flex items-start space-x-2 py-2 rounded px-4 hover:bg-primary-50 dark:hover:bg-gray-900" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#how-it-works" data-scroll-duration-value="800">
+  <div class="subnav-link-text font-display whitespace-nowrap flex-1 min-h-[1.7rem] font-medium">
+    How it works
+  </div>
+</a>
+
+  
+<a class="group flex items-start space-x-2 py-2 rounded px-4 hover:bg-primary-50 dark:hover:bg-gray-900" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#installation" data-scroll-duration-value="800">
+  <div class="subnav-link-text font-display whitespace-nowrap flex-1 min-h-[1.7rem] font-medium">
+    Installation
+  </div>
+</a>
+
+  
+<a class="group flex items-start space-x-2 py-2 rounded px-4 hover:bg-primary-50 dark:hover:bg-gray-900" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#using-agent-os" data-scroll-duration-value="800">
+  <div class="subnav-link-text font-display whitespace-nowrap flex-1 min-h-[1.7rem] font-medium">
+    Using Agent OS
+  </div>
+</a>
+
+  
+<a class="group flex items-start space-x-2 py-2 rounded px-4 hover:bg-primary-50 dark:hover:bg-gray-900 active-subnav-item bg-primary-50 dark:bg-gray-900" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#refining-agent-os" data-scroll-duration-value="800">
+  <div class="subnav-link-text font-display whitespace-nowrap flex-1 min-h-[1.7rem] font-medium text-black dark:text-white">
+    Refining Agent OS
+  </div>
+</a>
+
+  
+<a class="group flex items-start space-x-2 py-2 rounded px-4 hover:bg-primary-50 dark:hover:bg-gray-900" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#best-practices" data-scroll-duration-value="800">
+  <div class="subnav-link-text font-display whitespace-nowrap flex-1 min-h-[1.7rem] font-medium">
+    Best Practices
+  </div>
+</a>
+
+  
+<a class="group flex items-start space-x-2 py-2 rounded px-4 hover:bg-primary-50 dark:hover:bg-gray-900" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#faq" data-scroll-duration-value="800">
+  <div class="subnav-link-text font-display whitespace-nowrap flex-1 min-h-[1.7rem] font-medium">
+    FAQ
+  </div>
+</a>
+
+
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="w-full space-y-12 pt-8
+                lg:flex-1 lg:space-y-20">
+      
+<section id="why" class="space-y-4 md:space-y-6 sm:text-lg xl:text-xl pt-0 leading-5 xs:leading-6 sm:leading-6.5 lg:leading-7 xl:leading-7.5 ">
+  
+
+  <h2>Why use Agent OS?</h2>
+
+  <p>
+    Stop wrestling with AI that writes the wrong code. Agent OS transforms coding agents from confused assistants into trusted developers who truly understand your codebase.
+  </p>
+
+  <p>
+    3 reasons why product teams use Agent OS:
+  </p>
+
+  
+<h3 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-7 h-7 sm:w-8 sm:h-8 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      1
+    </div>
+
+  <div class="text-pretty relative font-text top-[3px] xs:top-[4px] ">
+    Complete context, not just prompts
+  </div>
+</h3>
+
+
+  <p>
+    Unlike basic AI setups, Agent OS provides <a href="https://buildermethods.com/agent-os#how-it-works" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" data-scroll-duration-value="800">three layers of context</a> that work together:
+  </p>
+
+  <ul>
+    <li><strong>Standards</strong> - Your coding style, tech stack, and best practices</li>
+    <li><strong>Product</strong> - Your mission, architecture, roadmap, and decisions</li>
+    <li><strong>Specs</strong> - Detailed plans &amp; tasks for each feature implementation</li>
+  </ul>
+
+  <p class="text-pretty">
+    <strong>The result:</strong> Agents write code that looks like you wrote it—first time, every time.
+  </p>
+
+  
+<h3 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-7 h-7 sm:w-8 sm:h-8 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      2
+    </div>
+
+  <div class="text-pretty relative font-text top-[3px] xs:top-[4px] ">
+    Structured development, not chaos
+  </div>
+</h3>
+
+
+  <p>
+    Agent OS replaces random prompting and circular rewrites with a proven workflow. It automatically:
+  </p>
+
+  <ul>
+    <li>Writes comprehensive specs before coding begins</li>
+    <li>Breaks features into trackable, TDD-focused tasks</li>
+    <li>Documents key decisions as they happen</li>
+    <li>Updates your roadmap as features ship</li>
+  </ul>
+
+  <p>
+    <strong>The difference:</strong> Ship features faster with clear specs and completed tasks—not endless cycles of (re)explaining requirements and redoing work.
+  </p>
+
+  
+<h3 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-7 h-7 sm:w-8 sm:h-8 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      3
+    </div>
+
+  <div class="text-pretty relative font-text top-[3px] xs:top-[4px] ">
+    Your standards, your way
+  </div>
+</h3>
+
+
+<p>
+  Agent OS is completely yours to shape. Define your own coding standards, write custom instructions, and adapt every workflow to match how your team operates. No rigid interfaces or prescribed processes—just markdown files you control. Works seamlessly with any AI tool or IDE you choose.
+</p>
+
+<p>
+  <strong>The relief:</strong> Your coding agent finally feels like a senior developer on your team—thinking your way, following your patterns, and shipping at your standards.
+</p>
+
+
+</section>
+
+      
+<section id="how-it-works" class="space-y-4 md:space-y-6 sm:text-lg xl:text-xl pt-8 leading-5 xs:leading-6 sm:leading-6.5 lg:leading-7 xl:leading-7.5 ">
+  
+
+  <h2>
+    The Three Layers of Context
+  </h2>
+
+  <p>
+    Agent OS works by layering context—just like you'd onboard a human developer. Each layer builds on the previous one, creating a complete picture of how you build software.
+  </p>
+
+  <p class="py-4">
+    <img alt="Agent OS - 3 layers of context" class="w-full" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/agent-os-3-layers-of-context-e0f77c3a.png">
+  </p>
+
+  
+<h3 class="flex flex-col items-start space-y-1
+                             sm:flex-row sm:space-x-3 sm:space-y-0 ">
+    <div class="text-pretty relative font-display font-semibold uppercase tracking-wider leading-none rounded
+                bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 py-1 px-2 sm:py-2 sm:px-3 text-xs xs:text-sm sm:text-base">
+      Layer 1
+    </div>
+
+  <div class="text-pretty relative font-text top-[4px] sm:top-[5px] md:top-[4px] text-tertiary">
+    Your standards
+  </div>
+</h3>
+
+
+  <p>Your standards define how you build software.  Your stack.  Your opinions.  Your style.  Your priorities.  The standards you expect everyone on your team to follow when building <em>anything</em>.  These should include:</p>
+  <ul>
+    <li><strong>Tech Stack</strong> — Your default frameworks, libraries, and tools</li>
+    <li><strong>Code Style</strong> — Your formatting rules, naming conventions, and preferences</li>
+    <li><strong>Best Practices</strong> — Your development philosophy (e.g., TDD, commit patterns, etc.)</li>
+  </ul>
+
+  <p>Your standards documentation lives on your system in <code>~/.agent-os/standards/...</code> and are referenced from every project, every codebase. Set once, use everywhere, override as needed.</p>
+
+  
+<h3 class="flex flex-col items-start space-y-1
+                             sm:flex-row sm:space-x-3 sm:space-y-0 ">
+    <div class="text-pretty relative font-display font-semibold uppercase tracking-wider leading-none rounded
+                bg-secondary text-tertiary-50 dark:text-tertiary-400 py-1 px-2 sm:py-2 sm:px-3 text-xs xs:text-sm sm:text-base">
+      Layer 2
+    </div>
+
+  <div class="text-pretty relative font-text top-[4px] sm:top-[5px] md:top-[4px] text-secondary">
+    Your product
+  </div>
+</h3>
+
+
+  <p>At the product (codebase) layer, we document what it is we're building, why we're building it, who it's for, and the big-picture product roadmap.  This includes:</p>
+
+  <ul>
+    <li><strong>Mission</strong> — What you're building, for whom, and why it matters</li>
+    <li><strong>Roadmap</strong> — Features shipped, in progress, and planned</li>
+    <li><strong>Decisions</strong> — Key architectural and technical choices (with rationale)</li>
+    <li><strong>Product-specific stack</strong> — The exact versions and configurations for this codebase</li>
+  </ul>
+
+  <p>Product documentation lives in your codebase (<code>.agent-os/product/</code>) and give agents the full picture of your product.</p>
+
+  
+<h3 class="flex flex-col items-start space-y-1
+                             sm:flex-row sm:space-x-3 sm:space-y-0 ">
+    <div class="text-pretty relative font-display font-semibold uppercase tracking-wider leading-none rounded
+                bg-primary dark:bg-primary-500 text-tertiary-50 dark:text-tertiary-400 py-1 px-2 sm:py-2 sm:px-3 text-xs xs:text-sm sm:text-base">
+      Layer 3
+    </div>
+
+  <div class="text-pretty relative font-text top-[4px] sm:top-[5px] md:top-[4px] text-primary dark:text-primary-500">
+    Your specs
+  </div>
+</h3>
+
+
+  <p>Throughout your product's development, you'll create many specs. Each spec is a single feature or enhancement or fix, which typically represents a few hours or days of work (accellerated with the help of AI).  Each spec will have its own requirements, technical specs, and tasks breakdown.</p>
+
+  <p>Individual feature specifications include:</p>
+  <ul>
+    <li><strong>SRD (Spec Requirements Document)</strong> — Goals for the feature, user stories, success criteria</li>
+    <li><strong>Technical Specs</strong> — API design, database changes, UI requirements</li>
+    <li><strong>Tasks Breakdown</strong> — Trackable step-by-step implementation plan with dependencies</li>
+  </ul>
+
+  <p>Specs live in dated folders inside your codebase (<code>.agent-os/specs/2025-12-19-user-auth/</code>) and guide agents through each spec's implementations.</p>
+
+  <p>
+    With all three layers in place, your agent has everything it needs: how you build (Standards), what you're building (Product), and what to build next (Specs). No more confusion, no more rewrites—just clean, consistent code that looks like you wrote it.
+  </p>
+
+
+</section>
+
+      
+<section id="installation" class="space-y-4 md:space-y-6 sm:text-lg xl:text-xl pt-8 leading-5 xs:leading-6 sm:leading-6.5 lg:leading-7 xl:leading-7.5 ">
+  
+
+  <h2>
+    Install Agent OS
+  </h2>
+
+  <p>Agent OS has a flexible two-part installation system:</p>
+
+  <ol class="space-y-4">
+    <li>
+      <a class="" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#base-installation" data-scroll-duration-value="800">
+        Base Installation
+</a>      <br>Install Agent OS centrally on your system<br>
+      <span class="text-sm text-gray-500">Optional but recommended - maintains your standards and instructions</span>
+    </li>
+    <li>
+      <a class="" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#project-installation" data-scroll-duration-value="800">
+        Project Installation
+</a>      <br>Install Agent OS into each project you work on<br>
+      <span class="text-sm text-gray-500">Self-contained setup with project-specific customizations</span>
+    </li>
+  </ol>
+
+  <p class="py-7">
+    <img alt="Agent OS - Installation" class="w-full dark:hidden" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/agent-os-installation-5c19838d.png">
+    <img alt="Agent OS - Installation" class="w-full hidden dark:block" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/agent-os-installation-dark-f50d9871.png">
+  </p>
+
+  <p>
+    See <a href="https://buildermethods.com/agent-os#what-gets-installed-where" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" data-scroll-duration-value="800">What Gets Installed Where?</a> to understand the file structure.
+  </p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <div class="space-y-12">
+
+    <div class="space-y-4 md:space-y-6" id="base-installation">
+
+      
+<h3 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-7 h-7 sm:w-8 sm:h-8 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      1
+    </div>
+
+  <div class="text-pretty relative font-text top-[3px] xs:top-[4px] ">
+    Base Installation
+  </div>
+</h3>
+
+
+      <p>The base installation sets up Agent OS centrally on your system. This is optional but recommended, as it maintains your default standards and instructions that projects will inherit from.</p>
+
+      <h4>
+        Navigate to your home folder (or other location)
+      </h4>
+
+      <p>The recommendation location for your base installation is your system's home directory (<code>~/.agent-os</code>).</p>
+
+      <p>However, you can choose another location for your base installation.</p>
+
+      <h4>Choose your installation based on which tools you use:</h4>
+
+      <div class="space-y-4">
+        <div>
+          <p>Agent OS with Claude Code</p>
+          
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/base.sh | bash -s -- --claude-code</code></pre>
+</div>
+        </div>
+
+        <div>
+          <p>Agent OS with Cursor</p>
+          
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/base.sh | bash -s -- --cursor</code></pre>
+</div>
+        </div>
+
+        <div>
+          <p>Agent OS with Claude Code &amp; Cursor</p>
+          
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/base.sh | bash -s -- --claude-code --cursor</code></pre>
+</div>
+        </div>
+      </div>
+
+      
+<div class="bg-gray-50 dark:bg-gray-900 py-4 px-6 rounded-lg text-base" data-controller="components--toggle">
+
+  <div class="flex items-start justify-between cursor-pointer" data-action="click-&gt;components--toggle#toggle">
+    <div class="space-y-1">
+      <div class="flex-1 font-medium text-gray-600 dark:text-gray-400">
+        What the base installation does...
+      </div>
+    </div>
+    <div class="relative top-1">
+      <div class="" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden pt-8 space-y-4 sm:space-y-6" data-components--toggle-target="toggleable">
+    
+        <ul>
+          <li>Creates the <code>.agent-os/</code> folder in your chosen location (home directory or elsewhere).</li>
+          <li>Downloads and installs instructions files (plan-product, create-spec, execute-tasks, execute-task, analyze-product) from the <a href="https://github.com/buildermethods/agent-os/tree/main/instructions" target="_blank">GitHub repo</a>.</li>
+          <li>Downloads and installs standards file templates (tech-stack, code-style, best-practices) from the <a href="https://github.com/buildermethods/agent-os/tree/main/standards" target="_blank">GitHub repo</a>.</li>
+          <li>Downloads and installs language-specific code style guides from the <a href="https://github.com/buildermethods/agent-os/tree/main/standards/code-style" target="_blank">GitHub repo</a>.</li>
+          <li>Downloads and installs commands from the <a href="https://github.com/buildermethods/agent-os/tree/main/commands" target="_blank">GitHub repo</a>.</li>
+          <li>Creates a <code>config.yml</code> file to track your Agent OS version and settings.</li>
+          <li>Sets up your project installation script at <code>~/.agent-os/setup/project.sh</code>.</li>
+          <li>If using Claude Code, installs agents files to be copied into project installations.</li>
+          <li>Preserves any existing files (won't overwrite your customizations).</li>
+        </ul>
+
+  </div>
+
+</div>
+
+      
+<div class="bg-gray-50 dark:bg-gray-900 py-4 px-6 rounded-lg text-base" data-controller="components--toggle">
+
+  <div class="flex items-start justify-between cursor-pointer" data-action="click-&gt;components--toggle#toggle">
+    <div class="space-y-1">
+      <div class="flex-1 font-medium text-gray-600 dark:text-gray-400">
+        Prefer manual installation?
+      </div>
+        <div class="text-base text-gray-400 dark:text-gray-500">
+          Follow these instructions instead...
+        </div>
+    </div>
+    <div class="relative top-1">
+      <div class="" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden pt-8 space-y-4 sm:space-y-6" data-components--toggle-target="toggleable">
+    
+
+        <div class="space-y-14">
+
+          <div class="space-y-6">
+            
+<h4 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-5 h-5 sm:w-6 sm:h-6 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      1
+    </div>
+
+  <div class="text-pretty relative font-text -top-[3px] sm:-top-[2px] ">
+    Create the Agent OS directories
+  </div>
+</h4>
+
+
+            
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">mkdir -p ~/.agent-os/standards/code-style
+mkdir -p ~/.agent-os/instructions</code></pre>
+</div>
+
+            <p><strong>Note:</strong> The <code>~/</code> refers to your home directory:</p>
+            <p class="pl-6"><strong>Mac/Linux</strong>: <code>/Users/yourusername/</code></p>
+            <p class="pl-6"><strong>Windows</strong>: <code>C:\Users\yourusername\</code> (or use <code>%USERPROFILE%</code> in Command Prompt)</p>
+          </div>
+
+          <div class="space-y-6">
+            
+<h4 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-5 h-5 sm:w-6 sm:h-6 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      2
+    </div>
+
+  <div class="text-pretty relative font-text -top-[3px] sm:-top-[2px] ">
+    Copy the standards files
+  </div>
+</h4>
+
+
+            <p>Copy the <a href="https://github.com/buildermethods/agent-os/tree/main/standards">standards files</a> to <code>~/.agent-os/standards/</code>:</p>
+            <ul>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/standards/tech-stack.md" target="_blank"><code>tech-stack.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/standards/code-style.md" target="_blank"><code>code-style.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/standards/best-practices.md" target="_blank"><code>best-practices.md</code></a></li>
+            </ul>
+
+            <p>Also copy the language-specific style guides to <code>~/.agent-os/standards/code-style/</code>:</p>
+            <ul>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/standards/code-style/html-style.md" target="_blank"><code>html-style.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/standards/code-style/css-style.md" target="_blank"><code>css-style.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/standards/code-style/javascript-style.md" target="_blank"><code>javascript-style.md</code></a></li>
+            </ul>
+          </div>
+
+          <div class="space-y-6">
+            
+<h4 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-5 h-5 sm:w-6 sm:h-6 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      3
+    </div>
+
+  <div class="text-pretty relative font-text -top-[3px] sm:-top-[2px] ">
+    Copy the instructions files
+  </div>
+</h4>
+
+
+            <p>Copy the <a href="https://github.com/buildermethods/agent-os/tree/main/instructions">instruction files</a> to <code>~/.agent-os/instructions/</code>:</p>
+            <ul>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/instructions/core/plan-product.md" target="_blank"><code>core/plan-product.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/instructions/core/create-spec.md" target="_blank"><code>core/create-spec.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/instructions/core/execute-tasks.md" target="_blank"><code>core/execute-tasks.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/instructions/core/execute-task.md" target="_blank"><code>core/execute-task.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/instructions/core/analyze-product.md" target="_blank"><code>core/analyze-product.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/instructions/meta/pre-flight.md" target="_blank"><code>meta/pre-flight.md</code></a></li>
+            </ul>
+
+            <p><strong>Note:</strong> These instruction files work well as-is, but you're welcome to review and adjust them if needed.</p>
+          </div>
+
+          <div class="space-y-6">
+            
+<h4 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-5 h-5 sm:w-6 sm:h-6 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      3
+    </div>
+
+  <div class="text-pretty relative font-text -top-[3px] sm:-top-[2px] ">
+    Copy the commands files
+  </div>
+</h4>
+
+
+            <p>Copy the <a href="https://github.com/buildermethods/agent-os/tree/main/commands">commands files</a> to <code>~/.agent-os/commands/</code>:</p>
+            <ul>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/commands/analyze-product.md" target="_blank"><code>analyze-product.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/commands/create-spec.md" target="_blank"><code>create-spec.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/commands/execute-tasks.md" target="_blank"><code>execute-tasks.md</code></a></li>
+              <li><a href="https://github.com/buildermethods/agent-os/blob/main/commands/plan-product.md" target="_blank"><code>plan-product.md</code></a></li>
+            </ul>
+          </div>
+
+        </div>
+
+
+  </div>
+
+</div>
+
+      <div id="update-instructions">
+        
+<div class="bg-gray-50 dark:bg-gray-900 py-4 px-6 rounded-lg text-base" data-controller="components--toggle">
+
+  <div class="flex items-start justify-between cursor-pointer" data-action="click-&gt;components--toggle#toggle">
+    <div class="space-y-1">
+      <div class="flex-1 font-medium text-gray-600 dark:text-gray-400">
+        Update instructions
+      </div>
+        <div class="text-base text-gray-400 dark:text-gray-500">
+          How to update your Agent OS files...
+        </div>
+    </div>
+    <div class="relative top-1">
+      <div class="" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden pt-8 space-y-4 sm:space-y-6" data-components--toggle-target="toggleable">
+    
+
+          <p><strong>Upgrading from an earlier version?</strong> Follow these steps:</p>
+
+          <ol class="space-y-4">
+            <li>
+              <strong>Back up customizations:</strong> If you've customized files in <code>/instructions</code>, back them up now.
+            </li>
+            <li>
+              <strong>Run the base installation update:</strong>
+              
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code"><span class="hljs-meta prompt_"># </span>Navigate to your home directory (or wherever you want the base installation)
+cd ~
+<span class="hljs-meta prompt_">
+# </span>Run with flags for your tools (adjust as needed):
+curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/base.sh | bash -s -- --overwrite-instructions --claude-code --cursor</code></pre>
+</div>
+            </li>
+            <li>
+              <strong>Clean up old Claude Code commands:</strong> If you have Agent OS commands in <code>~/.claude/commands</code>, remove them.
+            </li>
+            <li>
+              <strong>Install into your projects:</strong> Navigate to each project and run your project installation command (this example assumes your base installation resides in your home folder):
+              
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">~/.agent-os/setup/project.sh</code></pre>
+</div>
+            </li>
+          </ol>
+
+          <p class="mt-6">As Agent OS evolves, you may want to update your instruction files while preserving your custom standards. Use these flags with the install script:</p>
+
+          <div class="space-y-6">
+            <div class="space-y-4">
+              <h4 class="font-semibold">Update Instruction Files Only</h4>
+              <p>This updates the instruction files to the latest versions while preserving your standards:</p>
+              
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/base.sh | bash -s -- --overwrite-instructions --claude-code --cursor</code></pre>
+</div>
+              <p class="text-sm text-gray-500">Adjust the flags based on which tools you use</p>
+            </div>
+
+            <div class="space-y-4">
+              <h4 class="font-semibold">Update Standards Files Only</h4>
+              <p>This resets your standards files to the default templates. <strong>Warning:</strong> This will overwrite your customizations!</p>
+              
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/base.sh | bash -s -- --overwrite-standards --claude-code --cursor</code></pre>
+</div>
+              <p class="text-sm text-gray-500">Adjust the flags based on which tools you use</p>
+            </div>
+
+            <div class="space-y-4">
+              <h4 class="font-semibold">Update Both Instructions and Standards</h4>
+              <p>This updates everything to the latest version. <strong>Warning:</strong> This will overwrite all your customizations!</p>
+              
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/base.sh | bash -s -- --overwrite-instructions --overwrite-standards --claude-code --cursor</code></pre>
+</div>
+              <p class="text-sm text-gray-500">Adjust the flags based on which tools you use</p>
+            </div>
+          </div>
+
+          <p class="mt-4"><strong>Best Practice:</strong> Before updating standards files, back up your customizations so you can restore them after the update.</p>
+
+
+  </div>
+
+</div>
+      </div>
+
+      
+<h3 class="flex flex-col items-start space-y-1
+                             sm:flex-row sm:space-x-3 sm:space-y-0 ">
+    <div class="text-pretty relative font-display font-semibold uppercase tracking-wider leading-none rounded
+                bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 py-1 px-2 sm:py-2 sm:px-3 text-xs xs:text-sm sm:text-base">
+      Important
+    </div>
+
+  <div class="text-pretty relative font-text top-[4px] sm:top-[5px] md:top-[4px] ">
+    Customize your base standards
+  </div>
+</h3>
+
+
+      <p>After installation, customize the standards files in <code>~/.agent-os/standards/</code> to match your preferences. These will be your defaults for all projects.</p>
+
+      <p>
+        The installed files are templates - customize them to define <em>your</em> way of building software. Projects will copy these standards, which you can then customize per-project if needed.
+      </p>
+
+      <p class="mt-4">
+        <strong>After base installation is complete, you'll see your project installation command.</strong> Save this command - you'll use it to install Agent OS into each of your projects.
+      </p>
+
+    </div>
+
+    
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+    <div class="space-y-4 md:space-y-6" id="project-installation">
+
+      
+<h3 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-7 h-7 sm:w-8 sm:h-8 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      2
+    </div>
+
+  <div class="text-pretty relative font-text top-[3px] xs:top-[4px] ">
+    Project Installation
+  </div>
+</h3>
+
+
+      <p>Each project gets its own self-contained Agent OS installation. This copies files from your base installation (if you have one) and sets up tool-specific commands.</p>
+
+      <div class="space-y-6">
+        <div>
+          <h4 class="font-semibold">If you have a base installation:</h4>
+          <p>Navigate to your project's root directory and run your project installation command:</p>
+          
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code"><span class="hljs-meta prompt_"># </span>If your base installation is in your home directory:
+~/.agent-os/setup/project.sh
+<span class="hljs-meta prompt_">
+# </span>If installed elsewhere:
+/path/to/agent-os/setup/project.sh</code></pre>
+</div>
+          <p class="text-sm text-gray-500">Your exact command was shown after base installation</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold">Without a base installation:</h4>
+          <p>You can install Agent OS directly into a project from GitHub:</p>
+          
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code"><span class="hljs-meta prompt_"># </span>Choose based on your tools:
+curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/project.sh | bash -s -- --no-base --claude-code
+curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/project.sh | bash -s -- --no-base --cursor
+curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/project.sh | bash -s -- --no-base --claude-code --cursor</code></pre>
+</div>
+          <p class="text-sm text-gray-500">Note: You'll need to customize the standards folder manually</p>
+        </div>
+      </div>
+
+      
+<div class="bg-gray-50 dark:bg-gray-900 py-4 px-6 rounded-lg text-base" data-controller="components--toggle">
+
+  <div class="flex items-start justify-between cursor-pointer" data-action="click-&gt;components--toggle#toggle">
+    <div class="space-y-1">
+      <div class="flex-1 font-medium text-gray-600 dark:text-gray-400">
+        What the project installation does...
+      </div>
+    </div>
+    <div class="relative top-1">
+      <div class="" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden pt-8 space-y-4 sm:space-y-6" data-components--toggle-target="toggleable">
+    
+        <ul>
+          <li>Creates <code>.agent-os/</code> folder in your project with instructions and standards</li>
+          <li>For Claude Code: Copies commands to your project's <code>.claude/commands/</code> folder</li>
+          <li>For Cursor: Creates <code>.cursor/rules/</code> with Agent OS commands</li>
+          <li>All files are self-contained - no external references</li>
+          <li>You can commit everything to version control for team access</li>
+        </ul>
+
+  </div>
+
+</div>
+
+      <p class="mt-4"><strong>Benefits of project installations:</strong></p>
+      <ul>
+        <li>More reliable - no external file references</li>
+        <li>Team-friendly - commit to Git for shared access</li>
+        <li>Customizable - adjust standards per project</li>
+        <li>Portable - works anywhere without system dependencies</li>
+      </ul>
+    </div>
+
+    
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+    <div class="space-y-4 md:space-y-6" id="project-types">
+
+      <h3>Project Types (Optional)</h3>
+
+      <p>If you work on different types of projects (e.g., Ruby on Rails, React, Python), you can define different sets of standards for each:</p>
+
+      <p>Your base installation includes a <code>config.yml</code> file that defines project types like this:</p>
+
+      
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="yaml" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code"><span class="hljs-attr">project_types:</span>
+  <span class="hljs-attr">default:</span>
+    <span class="hljs-attr">instructions:</span> <span class="hljs-string">~/.agent-os/instructions</span>
+    <span class="hljs-attr">standards:</span> <span class="hljs-string">~/.agent-os/standards</span>
+
+  <span class="hljs-comment"># type_a:</span>
+  <span class="hljs-comment">#   instructions: ~/.agent-os/project_types/type_a/instructions</span>
+  <span class="hljs-comment">#   standards: ~/.agent-os/project_types/type_a/standards</span>
+
+  <span class="hljs-comment"># type_b:</span>
+  <span class="hljs-comment">#   instructions: ~/.agent-os/project_types/type_b/instructions</span>
+  <span class="hljs-comment">#   standards: ~/.agent-os/project_types/type_b/standards</span>
+
+<span class="hljs-attr">default_project_type:</span> <span class="hljs-string">default</span></code></pre>
+</div>
+
+      <p>To create custom project types:</p>
+
+      <ol>
+        <li>
+          <strong>Create a project type folder</strong> in your base installation:
+          
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">mkdir -p ~/.agent-os/project_types/ruby-on-rails
+cp -r ~/.agent-os/instructions ~/.agent-os/project-types/ruby-on-rails/
+cp -r ~/.agent-os/standards ~/.agent-os/project-types/ruby-on-rails/</code></pre>
+</div>
+        </li>
+        <li>
+          <strong>Customize the standards and instructions</strong> in that folder for your specific project type
+        </li>
+        <li>
+          <strong>Update config.yml</strong> in your base installation to uncomment and modify the example:
+          
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="yaml" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code"><span class="hljs-attr">project_types:</span>
+  <span class="hljs-attr">default:</span>
+    <span class="hljs-attr">instructions:</span> <span class="hljs-string">~/.agent-os/instructions</span>
+    <span class="hljs-attr">standards:</span> <span class="hljs-string">~/.agent-os/standards</span>
+
+  <span class="hljs-attr">ruby-on-rails:</span>
+    <span class="hljs-attr">instructions:</span> <span class="hljs-string">~/.agent-os/project_types/ruby-on-rails/instructions</span>
+    <span class="hljs-attr">standards:</span> <span class="hljs-string">~/.agent-os/project_types/ruby-on-rails/standards</span></code></pre>
+</div>
+        </li>
+        <li>
+          <strong>Use when installing</strong> into a project:
+          
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">~/.agent-os/setup/project.sh --project-type=ruby-on-rails</code></pre>
+</div>
+        </li>
+        <li>
+          <strong>Optional:</strong> Set as your default by updating <code>default_project_type: ruby-on-rails</code> in config.yml
+        </li>
+      </ol>
+    </div>
+
+
+    
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+    <div class="space-y-4 md:space-y-6" id="what-gets-installed-where">
+
+      <h3>What Gets Installed Where?</h3>
+
+      <p>The new v1.4.0 structure separates base and project installations:</p>
+
+      <p><strong>Base Installation</strong> (your system-wide defaults):</p>
+
+      
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">~/.agent-os/
+├── config.yml                 # Tracks version, tools, and project types
+├── standards/                 # Your default standards
+│   ├── tech-stack.md
+│   ├── code-style.md
+│   ├── best-practices.md
+│   └── code-style/
+│       └── [language]-style.md
+├── instructions/              # Core Agent OS instructions
+│   ├── core/
+│   │   └── [instructions-files].md
+│   └── meta/
+│       ├── pre-flight.md
+│       └── post-flight.md
+├── commands/                  # Commands (used for Claude Code &amp; Cursor rules)
+│   └── [command-files].md
+├── claude-code/               # Claude Code specific files
+│   └── agents/
+│       └── [agent-files].md
+└── setup/                     # Installation scripts
+    ├── base.sh
+    └── project.sh</code></pre>
+</div>
+
+      <p><strong>Project Installation</strong> (self-contained in each project):</p>
+
+      
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">your-project/
+├── .agent-os/                    # Project's own Agent OS installation
+│   ├── instructions/             # Copied from base (or defaults)
+│   │   └── [same structure as base]
+│   ├── standards/                # Copied from base (or project type)
+│   │   └── [same structure as base]
+│   ├── product/                  # Created by plan-product command
+│   ├── recaps/                   # Created by execute-tasks command
+│   └── specs/                    # Created by create-spec command
+├── .claude/                      # If using Claude Code
+│   ├── commands/                 # Agent OS commands
+│   │   └── [command-files].md
+│   └── agents/                   # Agent files
+│       └── [agent-files].md
+└── .cursor/                      # If using Cursor
+    └── rules/
+        └── [command-files].mdc</code></pre>
+</div>
+
+      <p class="mt-4"><strong>Key difference in version 1.4+ from earlier versions:</strong> Each project is now self-contained with its own copy of instructions and standards. No more external references means more reliable performance and better team collaboration.</p>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+      
+<section id="using-agent-os" class="space-y-4 md:space-y-6 sm:text-lg xl:text-xl pt-8 leading-5 xs:leading-6 sm:leading-6.5 lg:leading-7 xl:leading-7.5 ">
+  
+  <h2>
+    Using Agent OS
+  </h2>
+
+  <p>With Agent OS installed, you're ready to supercharge your AI coding workflow.</p>
+
+  <p>At a high level, there are 3 phases that come into play when you're building with Agent OS:</p>
+
+  
+<h3 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-7 h-7 sm:w-8 sm:h-8 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      1
+    </div>
+
+  <div class="text-pretty relative font-text top-[3px] xs:top-[4px] ">
+    Define your standards
+  </div>
+</h3>
+
+
+  <p>Using your <a data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#base-installation" data-scroll-duration-value="800">base installation of Agent OS</a>, you should customize your coding standards, style, best practices, and common tech stacks used on your projects.
+  </p>
+
+  <p><a data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#define-standards" data-scroll-duration-value="800">More on defining standards</a></p>
+
+  
+<h3 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-7 h-7 sm:w-8 sm:h-8 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      2
+    </div>
+
+  <div class="text-pretty relative font-text top-[3px] xs:top-[4px] ">
+    Initiate a project
+  </div>
+</h3>
+
+
+  <p>After <a data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#project-installation" data-scroll-duration-value="800">installing Agent OS in a project</a>, use <code>/plan-product</code> (for a new product) or <code>/analyze-product</code> (for an existing codebase) to define the project's mission and roadmap.
+  </p>
+
+  <p><a data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#plan-product" data-scroll-duration-value="800">More on planning your product</a></p>
+
+  
+<h3 class="flex items-start space-x-3 ">
+    <div class="bg-tertiary dark:bg-gray-900 text-tertiary-50 dark:text-tertiary-400 w-7 h-7 sm:w-8 sm:h-8 text-xs xs:text-sm sm:text-base
+                rounded-full flex items-center justify-center font-display font-semibold">
+      3
+    </div>
+
+  <div class="text-pretty relative font-text top-[3px] xs:top-[4px] ">
+    Plan &amp; build features
+  </div>
+</h3>
+
+
+  <p>Feature development with Agent OS involves a repeating workflow which follows this sequence of commands:
+  </p>
+
+  <ol>
+    <li><strong>/create-spec - </strong>Create the detailed spec for this feature.</li>
+    <li><strong>/create-tasks - </strong>Create a tasks list based on the feature spec.</li>
+    <li><strong>/execute-tasks - </strong>Proceed with implementation of 1 or several tasks.</li>
+  </ol>
+
+  <p><a data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#feature-development" data-scroll-duration-value="800">More on feature development</a></p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3 id="define-standards">Defining Your Standards</h3>
+
+  <p>The main benefit of <a href="https://buildermethods.com/agent-os?data%5Baction%5D=click-%3Escroll%23scrollTo&amp;data%5Bcontroller%5D=scroll">installing the base installation of Agent OS#base-installation</a>, onto your system is it allows you to define your commonly used coding standards and best practices in one place.  Then every time you run your project installer for Agent OS, it will copy those into your project (where you can customize them further, if you want).</p>
+
+  <p>This is how your coding agent follows <em>your</em> best practices and coding style with every single task it executes.</p>
+
+  
+<div class="bg-gray-50 dark:bg-gray-900 py-4 px-6 rounded-lg text-base" data-controller="components--toggle">
+
+  <div class="flex items-start justify-between cursor-pointer" data-action="click-&gt;components--toggle#toggle">
+    <div class="space-y-1">
+      <div class="flex-1 font-medium text-gray-600 dark:text-gray-400">
+        Edit your tech stack
+      </div>
+        <div class="text-base text-gray-400 dark:text-gray-500">
+              <code>~/.agent-os/standards/tech-stack.md</code>
+
+        </div>
+    </div>
+    <div class="relative top-1">
+      <div class="" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden pt-8 space-y-4 sm:space-y-6" data-components--toggle-target="toggleable">
+    
+    <ul>
+      <li>Set your preferred frameworks and versions</li>
+      <li>Define default database choices</li>
+      <li>Specify hosting preferences</li>
+    </ul>
+
+    <p>
+      Etc...
+    </p>
+
+  </div>
+
+</div>
+
+  
+<div class="bg-gray-50 dark:bg-gray-900 py-4 px-6 rounded-lg text-base" data-controller="components--toggle">
+
+  <div class="flex items-start justify-between cursor-pointer" data-action="click-&gt;components--toggle#toggle">
+    <div class="space-y-1">
+      <div class="flex-1 font-medium text-gray-600 dark:text-gray-400">
+        Edit your code style
+      </div>
+        <div class="text-base text-gray-400 dark:text-gray-500">
+              <code>~/.agent-os/standards/code-style.md</code>
+
+        </div>
+    </div>
+    <div class="relative top-1">
+      <div class="" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden pt-8 space-y-4 sm:space-y-6" data-components--toggle-target="toggleable">
+    
+    <ul>
+      <li>Indentation preferences (spaces vs tabs, how many)</li>
+      <li>Naming conventions (camelCase vs snake_case)</li>
+      <li>File organization patterns</li>
+    </ul>
+
+    <p>
+      Etc...
+    </p>
+
+  </div>
+
+</div>
+
+  
+<div class="bg-gray-50 dark:bg-gray-900 py-4 px-6 rounded-lg text-base" data-controller="components--toggle">
+
+  <div class="flex items-start justify-between cursor-pointer" data-action="click-&gt;components--toggle#toggle">
+    <div class="space-y-1">
+      <div class="flex-1 font-medium text-gray-600 dark:text-gray-400">
+        Edit your best practices
+      </div>
+        <div class="text-base text-gray-400 dark:text-gray-500">
+              <code>~/.agent-os/standards/best-practices.md</code>
+
+        </div>
+    </div>
+    <div class="relative top-1">
+      <div class="" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden pt-8 space-y-4 sm:space-y-6" data-components--toggle-target="toggleable">
+    
+    <ul>
+      <li>Testing philosophy (TDD? Integration first?)</li>
+      <li>Performance vs readability trade-offs</li>
+      <li>Security considerations</li>
+    </ul>
+
+    <p>
+      Etc...
+    </p>
+
+  </div>
+
+</div>
+
+  <p>💡 <strong>Pro tip:</strong> Be opinionated! The more specific your standards, the more consistent your agent's output.</p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3 id="plan-product">Starting a New Product</h3>
+
+  <p>First, install Agent OS into your project by following the
+  <a data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#project-installation" data-scroll-duration-value="800">project installation instructions</a></p>
+
+  <p>When beginning a new product, you can provide as much or as little detail as you want—though more detail leads to better results by using the <code>/plan-product</code> command.</p>
+
+  <p>Installing Agent OS into an existing product that's midway through development?  You'll want to use the <a data-controller="scroll" data-action="click-&gt;scroll#scrollTo" href="https://buildermethods.com/agent-os#project-installation" data-scroll-duration-value="800">/analyze-product command</a> instead of the <code>/plan-product</code> command.</p>
+
+  
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">/plan-product
+
+I want to build a SaaS tool for tracking customer feedback
+Key features: feedback collection, sentiment analysis, reporting dashboard
+Target users: Product managers at B2B SaaS companies
+Tech stack: Use my defaults</code></pre>
+</div>
+
+  <p>
+    <strong>Note:</strong> When starting a new product, feel free to provide as much or as little detail in your initial prompt.  You can even invoke the <code>/plan-product</code> command with <em>no other details</em> and your agent will then prompt you for the specific details it needs to get started on your product's plan and roadmap.
+  </p>
+
+  <p>Once your agent has collected the basic details it needs, it will:</p>
+
+  <ul>
+    <li>✅ Create <code>.agent-os/product/</code> structure</li>
+    <li>✅ Generate mission.md with product vision</li>
+    <li>✅ Create a 5-phase roadmap</li>
+    <li>✅ Set up your preferred tech stack</li>
+  </ul>
+
+  <p><strong>Important:</strong> Review and edit the generated documentation to ensure it accurately reflects your vision and goals.</p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3 id="analyze-product">Adding Agent OS to Existing Products</h3>
+
+  <p>Have an existing codebase? No problem.  Use the <code>/analyze-product</code> command (instead of <code>/plan-product</code>) to install Agent OS into your existing codebase.</p>
+
+  
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">/analyze-product
+
+I want to install Agent OS in my existing codebase</code></pre>
+</div>
+
+  <p>Your agent will:</p>
+
+  <ul>
+    <li>🔍 Analyze your current code structure</li>
+    <li>📊 Detect your tech stack and patterns</li>
+    <li>📝 Create documentation reflecting what's already built</li>
+    <li>✅ Add completed features to "Phase 0" in the roadmap</li>
+  </ul>
+
+  <p><strong>Important:</strong> Review the generated documentation carefully—your agent's analysis might miss nuances or business context that only you know.</p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3 id="feature-development">Plan &amp; build a feature</h3>
+
+  <p>Feature development with Agent OS involves a sequence of these commands:</p>
+
+  <ol>
+    <li><strong>/create-spec - </strong>Create the detailed spec for this feature.</li>
+    <li><strong>/create-tasks - </strong>Create a tasks list based on the feature spec.</li>
+    <li><strong>/execute-tasks - </strong>Proceed with implementation of 1 or several tasks.</li>
+  </ol>
+
+  <p>Let's break down each step:</p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3 id="create-spec">Create a spec</h3>
+
+  
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">/create-spec
+
+Let's add user authentication with email/password and OAuth</code></pre>
+</div>
+
+  <p>This will kick off the spec creation process, where your agent will:</p>
+
+  <ul>
+    <li>📋 Create a Spec Requirements Document (SRD)</li>
+    <li>🔧 Write technical specifications</li>
+    <li>💾 Design database schemas (if needed)</li>
+    <li>🔌 Document API endpoints (if needed)</li>
+  </ul>
+
+  <p><strong>Important:</strong> This is the most critical review point! Carefully examine the SRD, specs, and especially the task breakdown. Adjust anything that doesn't match your expectations before proceeding.</p>
+
+  <p>Specs live in: <code>.agent-os/specs/2025-07-16-user-authentication/</code></p>
+
+  <p>Everything look good? You're ready to proceed to creating the tasks for this spec...</p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3 id="create-tasks">Create a tasks list</h3>
+
+  
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">/create-tasks
+
+Please create tasks for this spec</code></pre>
+</div>
+
+  <p>Your agent will:
+
+  </p><ul>
+    <li>Create a tasks.md file in your spec folder for this feature.</li>
+    <li>Create a numbered checklist with parent tasks and sub-tasks</li>
+    <li>Follow a TDD (test-driven-development) approach when designing the task list and execution order.</li>
+  </ul>
+
+  <p><strong>Again:</strong> Give this tasks list a close review to ensure all the steps follow your spec, are in a logical order and everything looks as you'd expect.</p>
+
+  <p>Ready to go?  Proceed with the <code>/execute-tasks</code> command and specify which task(s) you want your agent to build.</p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3 id="execute-tasks">Execute tasks (start coding!)</h3>
+
+  
+<div class="code-snippet
+            bg-primary-50 dark:bg-gray-900 p-4 rounded-lg relative overflow-x-auto text-base
+            w-full lg:max-w-[670px] xl:max-w-[760px] 2xl:max-w-[850px]" data-controller="code-snippet" data-code-snippet-language-value="shell" data-code-snippet-theme-value="github-dark">
+  <span class="btn btn-xsmall bg-primary-500 text-white absolute top-2 right-2
+               hover:bg-primary-600" data-action="click-&gt;code-snippet#copy">
+    <span>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" " data-code-snippet-target="defaultIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+      <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" hidden" data-code-snippet-target="successIcon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+    </span>
+    <span>
+      <span data-code-snippet-target="defaultText">
+        Copy
+      </span>
+      <span class="hidden" data-code-snippet-target="successText">
+        Copied!
+      </span>
+    </span>
+  </span>
+  <pre><code data-code-snippet-target="code">/execute-tasks
+
+Please execute all of the tasks for this spec</code></pre>
+</div>
+
+  <p>Your agent will proceed with</p>
+
+  <ul>
+    <li>Implement every task, in order</li>
+    <li>Delegate to subagents for some steps (if using Claude Code)</li>
+    <li>Write and run tests</li>
+    <li>Mark tasks as completed</li>
+    <li>Update your product's roadmap if milestones have been completed</li>
+    <li>Document a recap of what was done and store this in .agent-os/recaps</li>
+    <li>Commit to git</li>
+  </ul>
+
+  <p><strong>Note:</strong> Under the hood, the <code>/execute-tasks</code> actually runs a series of several sub-processes (which you can inspect in your /instructions folder):</p>
+
+  <ol>
+    <li><strong>/execute-tasks - </strong> The main process you called</li>
+    <li><strong>/execute-task - </strong> Runs this on a loop for the implementation of each individual task (and it's sub-tasks).</li>
+    <li><strong>/post-execution-tasks - </strong> Finalizing, commiting to git, updating task list and roadmap, documenting the recap, delivering the final report to you.</li>
+  </ol>
+
+
+</section>
+
+      
+<section id="refining-agent-os" class="space-y-4 md:space-y-6 sm:text-lg xl:text-xl pt-8 leading-5 xs:leading-6 sm:leading-6.5 lg:leading-7 xl:leading-7.5 ">
+  
+
+  <h2>
+    Refining Your Agent OS
+  </h2>
+
+  <p>Agent OS gets better with use. Each spec teaches you something about your process, your preferences, and how to better guide your AI agents. Here's how to continuously improve your setup.</p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>The Refinement Loop</h3>
+
+  <p>After each feature or spec, ask yourself:</p>
+
+  <ol class="space-y-4">
+    <li><strong>What worked well?</strong><br>
+    Patterns to document and repeat</li>
+    <li><strong>What needed correction?</strong><br>
+    Gaps in your standards or instructions</li>
+    <li><strong>What surprised you?</strong><br>
+    Unexpected approaches that might be worth adopting</li>
+  </ol>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>Common Refinements</h3>
+
+  <div class="space-y-4">
+    <h4>After Your First Project</h4>
+    <ul>
+      <li>Add specific examples to code-style.md based on actual code</li>
+      <li>Update best-practices.md with patterns you had to correct</li>
+      <li>Clarify any tech stack choices that caused confusion</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>After Code Reviews</h4>
+    <ul>
+      <li>Notice yourself making the same corrections? Add them to standards</li>
+      <li>Find a pattern you love? Document it so agents use it consistently</li>
+      <li>Spot anti-patterns? Add them to best-practices.md with clear "don't do this" examples</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>After Team Feedback</h4>
+    <ul>
+      <li>Incorporate team preferences into your standards</li>
+      <li>Add team-specific workflows to best-practices.md</li>
+      <li>Document naming conventions everyone agrees on</li>
+    </ul>
+  </div>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>Where to Make Updates</h3>
+
+  <div class="space-y-4">
+    <h4>Standards Files</h4>
+    <ul>
+      <li><code>tech-stack.md</code> - New tool preferences, version updates</li>
+      <li><code>code-style.md</code> - Formatting patterns, naming conventions</li>
+      <li><code>best-practices.md</code> - Development philosophy, patterns to follow/avoid</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Code Style Organization <em>(For language-specific rules)</em></h4>
+    <ul>
+      <li>Create separate files in <code>~/.agent-os/standards/code-style/</code> for each language</li>
+      <li>Examples: <code>html-style.md</code>, <code>javascript-style.md</code>, <code>ruby-style.md</code></li>
+      <li>Reference them conditionally in your main <code>code-style.md</code> file</li>
+      <li>This keeps context lean—agents only load styles relevant to current work</li>
+    </ul>
+  </div>
+
+  <p>
+    <strong>Remember:</strong> Your standards can (and should) live in <em>both</em> your base installation of Agent OS (typically in your system's home directory) and in your project's <code>.agent-os/standards/</code> folder.  The version in your base installation are the templates used when installing Agent OS into new projects.  Any changes you make to your base installation will <em>not automatically</em> be used in your projects.  You'd need to copy those updates into your project's standards files.
+  </p>
+
+  <div class="space-y-2">
+    <h4>Product Files <em>(Product-specific)</em></h4>
+    <ul>
+      <li><code>roadmap.md</code> - Adjust phases based on learnings</li>
+      <li><code>tech-stack.md</code> - Override global standards when needed</li>
+    </ul>
+  </div>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>Making Refinements Stick</h3>
+
+  <div class="space-y-2">
+    <h4>Be Specific</h4>
+    <ul>
+      <li>❌ "Write better tests"</li>
+      <li>✅ "Write integration tests first, then unit tests. Mock external services using [specific pattern]"</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Show, Don't Just Tell</h4>
+    <ul>
+      <li>Include code examples in your standards</li>
+      <li>Show both good and bad patterns</li>
+      <li>Explain why one approach is preferred</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Version Your Changes</h4>
+    <ul>
+      <li>Update version numbers when making significant changes</li>
+      <li>Keep a brief changelog at the bottom of modified files</li>
+      <li>This helps track what changed and when</li>
+    </ul>
+  </div>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>Team Refinement</h3>
+
+  <p>If working with a team:</p>
+
+  <ol class="space-y-4">
+    <li><strong>Schedule Regular Reviews</strong><br>
+    Monthly or after major features</li>
+    <li><strong>Collect Patterns</strong><br>
+    What is everyone correcting in code reviews?</li>
+    <li><strong>Reach Consensus</strong><br>
+    Agree on patterns before adding to standards</li>
+    <li><strong>Share Updates</strong><br>
+    Ensure everyone updates their local Agent OS files</li>
+  </ol>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>Signs You Need Refinement</h3>
+
+  <ul>
+    <li>You're making the same corrections repeatedly</li>
+    <li>Agents consistently miss certain patterns</li>
+    <li>Code reviews reveal style inconsistencies</li>
+    <li>New team members point out unclear conventions</li>
+    <li>You discover better patterns worth standardizing</li>
+  </ul>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>The Long Game</h3>
+
+  <p>Remember: Agent OS is a living system. The goal isn't perfection on day one—it's continuous improvement. Each refinement makes your agents more effective and your codebase more consistent.</p>
+
+  <p>Your Agent OS a year from now will be dramatically better than today's, shaped by real experience and tailored to exactly how you and your team work best.</p>
+
+
+</section>
+
+      
+<section id="best-practices" class="space-y-4 md:space-y-6 sm:text-lg xl:text-xl pt-8 leading-5 xs:leading-6 sm:leading-6.5 lg:leading-7 xl:leading-7.5 ">
+  
+
+  <h2>
+    Best Practices
+  </h2>
+
+  <p>While Agent OS's task execution process automatically updates your roadmap and prompts for decision updates, it's good practice to regularly:</p>
+
+  <ol class="space-y-4">
+    <li><strong>Review and refine your standards</strong><br>
+    As you see patterns in code reviews, update your standards files</li>
+    <li><strong>Regularly review roadmap.md</strong><br>
+    Ensure it reflects actual progress and priorities</li>
+    <li><strong>Update decisions.md</strong><br>
+    Document important choices that affect future development</li>
+    <li><strong>Refine best-practices.md</strong><br>
+    Add patterns that help your agent think like you think</li>
+  </ol>
+
+  <p>Regular maintenance keeps your Agent OS aligned with your evolving project and team needs.</p>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>Tips for Success</h3>
+
+  <div class="space-y-4">
+    <h4>Review Plans Carefully</h4>
+    <ul>
+      <li>The planning phase is crucial—invest time here to save time later</li>
+      <li>Review the PRD and task breakdown before execution</li>
+      <li>Ask your agent to adjust plans if something doesn't look right</li>
+      <li>Ensure you're aligned on the approach before coding begins</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Start Small</h4>
+    <ul>
+      <li>Don't try to document everything at once</li>
+      <li>Begin with basic standards, refine as you go</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Be Specific</h4>
+    <ul>
+      <li>"Use PostgreSQL" → "Use PostgreSQL 15+ with schemas for multi-tenancy"</li>
+      <li>"Write tests" → "Write unit tests first, aim for 80% coverage"</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Trust the Process</h4>
+    <ul>
+      <li>Let your agent own entire features, not just snippets</li>
+      <li>Review and refine rather than micromanage</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Know When to Start Fresh</h4>
+    <ul>
+      <li>Not happy with the implementation? It's often better to revert and redo with better planning</li>
+      <li>Don't ask your agent to fix incorrectly implemented code—start clean with refined specs</li>
+      <li>A clear redo usually beats incremental fixes</li>
+    </ul>
+  </div>
+
+  
+<div class="pt-6 pb-4 sm:pt-9 sm:pb-8">
+  <hr>
+</div>
+
+
+  <h3>Troubleshooting</h3>
+
+  <div class="space-y-2">
+    <h4>Agent not following your style?</h4>
+    <ul>
+      <li>Check your standards files are specific enough</li>
+      <li>Add examples to code-style.md</li>
+      <li>Update best-practices.md with clear dos and don'ts</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Tasks too big or too small?</h4>
+    <ul>
+      <li>This is a planning issue—catch it early!</li>
+      <li>During create-spec, review the task breakdown carefully</li>
+      <li>Ask your agent to adjust: "Can you break task 3 into smaller sub-tasks?"</li>
+      <li>Or: "Tasks 2 and 3 should be combined"</li>
+    </ul>
+  </div>
+
+  <div class="space-y-2">
+    <h4>Wrong technical approach?</h4>
+    <ul>
+      <li>Review technical specs during the planning phase</li>
+      <li>Don't wait until code is written to course-correct</li>
+      <li>Say: "I'd prefer we use [different approach] for this"</li>
+      <li>Update tech-stack.md, decisions.md, or best-practices.md to prevent future issues</li>
+      <li>Best-practices.md is especially important—it teaches your agent to think like you</li>
+    </ul>
+  </div>
+
+  <p><strong>Remember:</strong> The best time to fix issues is during planning, not after code is written!</p>
+
+
+
+</section>
+
+      
+<section id="faq" class="space-y-4 md:space-y-6 sm:text-lg xl:text-xl pt-8 leading-5 xs:leading-6 sm:leading-6.5 lg:leading-7 xl:leading-7.5 ">
+  
+
+  <h2>
+    FAQ
+  </h2>
+
+  
+<div class="">
+
+
+  <div class="divide-y divide-gray-200 dark:divide-gray-700
+             ">
+    
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      What is Agent OS?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        Agent OS is a system for better planning and executing software development tasks with your AI agents.  It consists of a set of finely tuned instructions, commands, and specs that you and your team can dial in to ensure your agents build the right things, the right way—<em>your way</em>.
+      </p>
+
+      <p>
+        Agent OS is free and open source, created by <a href="https://x.com/casjam" target="_blank">Brian Casel</a>, the creator of <a href="https://buildermethods.com/" target="_blank">Builder Methods</a>.
+      </p>
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      What makes Agent OS different?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        Agent OS goes a few steps further than surface-level commands and project notes.  There 3 specific ways Agent OS is different:
+      </p>
+
+      <ul>
+        <li>Enhanced Context</li>
+        <li>Task &amp; Roadmap Management</li>
+        <li>Customizability</li>
+      </ul>
+
+      <p>
+        For more, see <a href="https://buildermethods.com/agent-os#why" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" data-scroll-duration-value="800">Why Agent OS?</a>
+      </p>
+
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      What is 'spec-driven development'?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+      Spec-driven development is a software development methodology that emphasizes the use of specifications to guide the development process—particularly in the age of building with AI coding agents.
+      </p>
+
+      It is a way to ensure that the software is built the right way—<em>your way</em>.
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      Is Agent OS free?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      Agent OS is free and open source and released under the MIT license.
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      Who created Agent OS?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        Agent OS is free and open source, created by <a href="https://x.com/casjam" target="_blank">Brian Casel</a> (that's me!).
+      </p>
+
+      <p>
+        I'm the creator of <a href="https://buildermethods.com/" target="_blank">Builder Methods</a>, where I teach fellow software designers and developers how to leverage AI to build better products, faster.  Get my free <a href="https://buildermethods.com/">Builder Briefing</a> newsletter to get my latest insights and updates to help you grow as a professional in the age of building with AI.
+      </p>
+
+      <p>
+        You can subscribe to my <a href="https://youtube.com/@briancasel" target="_blank">YouTube channel</a>, and connect with me on <a href="https://x.com/casjam" target="_blank">X</a>, <a href="https://bsky.app/profile/briancasel.com" target="_blank">Blusky</a>.
+      </p>
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      What's Builder Methods?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        <a href="https://buildermethods.com/" target="_blank">Builder Methods</a>, is where I (Brian Casel) teach fellow software designers and developers how to leverage AI to build better products, faster.  Get my free <a href="https://buildermethods.com/">Builder Briefing</a> newsletter to get my latest insights and updates to help you grow as a professional in the age of building with AI.
+      </p>
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      How does Agent OS manage context efficiently?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        Agent OS uses smart context management to optimize your agent's performance:
+      </p>
+
+      <ul>
+        <li><strong>Conditional Loading:</strong> Files are only loaded when needed for the current task</li>
+        <li><strong>Lite Files:</strong> Condensed versions of mission and spec documents for efficient AI context usage</li>
+        <li><strong>Context-Aware Instructions:</strong> Standards only load relevant sections based on what you're building</li>
+        <li><strong>60-80% Context Reduction:</strong> Compared to loading everything upfront</li>
+      </ul>
+
+      <p>
+        This means faster responses, better focus on the task at hand, and the ability to work with larger codebases without hitting context limits.
+      </p>
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      Does Agent OS support Claude Code's specialized agents?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        Yes! If you're using Claude Code, Agent OS automatically detects and uses specialized subagents for better performance:
+      </p>
+
+      <ul>
+        <li><strong>test-runner:</strong> Runs and analyzes test failures</li>
+        <li><strong>context-fetcher:</strong> Efficiently retrieves relevant documentation</li>
+        <li><strong>git-workflow:</strong> Handles branches, commits, and pull requests</li>
+        <li><strong>file-creator:</strong> Creates multiple files and directories in batch</li>
+      </ul>
+
+      <p>
+        These agents work seamlessly with Agent OS instructions, providing faster and more reliable execution while maintaining full compatibility for users of other AI tools.
+      </p>
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      I don't use Claude Code or Cursor.  Can I still use Agent OS?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        Absolutely!
+      </p>
+
+      <p>
+        Agent OS can be installed and adapted no matter which AI coding tool(s) you use.  See the section on <a href="https://buildermethods.com/agent-os#installation" data-controller="scroll" data-action="click-&gt;scroll#scrollTo" data-scroll-duration-value="800">installing Agent OS in your tools</a> for more details.
+      </p>
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      Is support or coaching available for me or my team?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        Yes — Coaching and courses for teams and individuals looking to get the most out of Agent OS, taught by me, Brian Casel (the creator of Agent OS).
+      </p>
+
+      <p>
+        <a href="https://buildermethods.com/" target="_blank">Click here</a> to learn more and inquire.
+      </p>
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      How can I learn more about building with AI?
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        My best free training and resources are available through my <a href="https://buildermethods.com/" target="_blank">Builder Briefing newsletter</a>.  You can also subscribe to my <a href="https://youtube.com/@briancasel" target="_blank">YouTube channel</a> where I regularly release build-with-AI tutorials.
+      </p>
+
+      <p>
+        You'll also find just-in-time courses and coaching packages <a href="https://buildermethods.com/" target="_blank">available from Builder Methods, here.</a>
+      </p>
+
+  </div>
+</div>
+
+    
+<div class="" data-controller="components--toggle">
+  <div class="cursor-pointer flex items-start justify-between space-x-8
+              py-4" data-action="click-&gt;components--toggle#toggle">
+
+    <div class="flex-1
+                font-medium
+                text-black dark:text-white
+                text-base
+                ">
+      I have more questions!
+    </div>
+
+    <div>
+      <div class="h-[1.5rem] flex flex-col justify-center" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+      <div class="h-[1.5rem] flex flex-col justify-center
+                  hidden" data-components--toggle-target="toggleable">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" absolutestrokewidth="false" class=" "><path d="m18 15-6-6-6 6"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden
+              space-y-4
+              pt-4 pb-8 lg:pt-6 lg:pb-10" data-components--toggle-target="toggleable">
+    
+      <p>
+        I'm happy to help!  <a href="https://buildermethods.com/#contact" target="_blank">Shoot me (Brian Casel) an email using the form here.</a>
+      </p>
+
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+
+</section>
+
+    </div>
+
+  </div>
+
+
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="px-8 py-12 text-center bg-gray-100 dark:bg-gray-800">
+
+  <div class="max-w-sm mx-auto space-y-12
+              lg:max-w-2xl
+              xl:max-w-5xl xl:px-8">
+
+    <div class="space-y-12
+                lg:flex lg:items-start lg:space-y-0 lg:space-x-16 lg:justify-end lg:text-left">
+
+      <div class="space-y-12
+                  lg:w-1/3 lg:space-y-8">
+        <div class="space-y-1">
+          <a class="inline-block" href="https://buildermethods.com/">
+            <img alt="Builder Methods" class="w-auto h-6 dark:hidden
+                                  xl:h-8" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/builder-methods-59003743.svg">
+            <img alt="Builder Methods" class="w-auto h-6 hidden dark:block
+                                  xl:h-8" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/builder-methods-light-c90b85bf.svg">
+</a>
+          <p class="text-sm text-pretty
+                    xl:text-base">
+            Training for pro software developers <span class="whitespace-nowrap">building with AI.</span>
+          </p>
+        </div>
+
+        <div class="space-y-4 max-w-xs mx-auto
+            lg:max-w-none lg:mx-0">
+
+  <p class="text-xs
+            xl:text-sm">
+    Created by <a target="_blank" href="https://briancasel.com/">Brian Casel</a> (that's me).  I'm a career software developer, founder, and creator of Builder Methods and the <a class="whitespace-nowrap inline-block" href="https://buildermethods.com/agent-os">Agent OS system</a> for <span class="whitespace-nowrap">building with AI.</span>
+  </p>
+
+  <div class="flex items-center justify-center gap-2
+              lg:justify-start">
+    <a target="_blank" href="https://youtube.com/@briancasel">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="size-4 xl:size-5">
+        <path fill="currentColor" d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path>
+      </svg>
+</a>
+    <a target="_blank" href="https://x.com/casjam">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300.251" class="size-2.5 xl:size-3">
+        <path fill="currentColor" d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"></path>
+      </svg>
+</a>
+    <a target="_blank" href="https://bsky.app/profile/briancasel.com">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 512" class="size-3 xl:size-4">
+        <path fill="currentColor" d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"></path>
+      </svg>
+</a>
+  </div>
+
+</div>
+
+
+      </div>
+
+      <div class="space-y-12
+                  lg:flex-1 lg:flex lg:items-start lg:justify-end lg:space-x-16 lg:pt-2">
+
+        
+<div class="space-y-3">
+  <h4 class="font-display font-semibold uppercase tracking-wider text-xs text-gray-400
+             md:text-sm
+             lg:text-xs">
+    Free Resources
+  </h4>
+
+  <div class="flex flex-col items-center space-y-2 text-xs
+              sm:text-sm
+              lg:items-start lg:text-xs
+              xl:text-sm">
+    
+          <a href="https://buildermethods.com/agent-os">
+            Agent OS
+</a>
+          <a href="https://buildermethods.com/">
+            Builder Briefing
+</a>
+          <a target="_blank" href="https://youtube.com/@briancasel">
+            YouTube Channel
+</a>
+  </div>
+
+</div>
+
+        
+<div class="space-y-3">
+  <h4 class="font-display font-semibold uppercase tracking-wider text-xs text-gray-400
+             md:text-sm
+             lg:text-xs">
+    Training &amp; Community
+  </h4>
+
+  <div class="flex flex-col items-center space-y-2 text-xs
+              sm:text-sm
+              lg:items-start lg:text-xs
+              xl:text-sm">
+    
+          <a href="https://buildermethods.com/pro">
+            Builder Methods Pro
+</a>
+          <a href="https://buildermethods.com/workshops">
+            Workshops
+</a>
+            <a href="https://buildermethods.com/login">
+              Login
+</a>
+  </div>
+
+</div>
+
+      </div>
+
+    </div>
+
+    <div class="space-y-2 flex flex-col items-center text-xs font-normal opacity-70
+                lg:flex-row lg:space-y-0 lg:space-x-4 lg:items-center">
+      <div class="text-gray-400 dark:text-gray-500">
+        © 2025 CasJam Media, LLC / Builder Methods
+      </div>
+      <a class="text-gray-400 dark:text-gray-500" href="https://buildermethods.com/contact">
+        Contact
+</a>    </div>
+  </div>
+
+</div>
+
+
+  
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; position: fixed; visibility: hidden; display: block; transition: right 0.3s; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-lqsgy5aurmho" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/anchor.html" data-dashlane-frameid="124"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/saved_resource(1).html"></iframe></div><iframe name="__privateStripeMetricsController0460" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="./Agent OS _ A free open-source system to train smart AI coding agents_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;" data-dashlane-frameid="127"></iframe></body></html>
